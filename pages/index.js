@@ -2,7 +2,7 @@ import Layout from "@/components/Layout";
 
 export async function getServerSideProps(){
     try {
-        const res= await fetch(`${process.env.API_URL}/posts`);
+        const res= await fetch(`${process.env.API_URL}/api/posts`);
         const posts= await res.json();
         return{props:{posts}}
 
